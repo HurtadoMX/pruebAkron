@@ -11,3 +11,311 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* ===================================================================== */
+/* estilos TaskForm */
+/* ===================================================================== */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+  }
+  
+  .task-form:hover {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task-form__label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+  }
+  
+  .task-form__input {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s ease;
+  }
+  
+  .task-form__input:focus {
+  border-color: #4a90e2;
+  }
+  
+  .task-form__select {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23333' d='M147.1 192L256 300.9 364.9 192 416 243.1 256 403.1 96 243.1z'/%3E%3C/svg%3E") no-repeat right 10px center;
+  }
+  
+  .task-form__select::-ms-expand {
+  display: none;
+  }
+  
+  .task-form__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  }
+  
+  .task-form__list-item {
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  .task-form__list-item:hover,
+  .task-form__list-item.selected {
+  background-color: #f2f2f2;
+  }
+  
+  .task-form__button {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  .task-form__button:hover {
+  background-color: #3472c7;
+  }
+  
+  .task-form__submit {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #3472c7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .task-form__submit:hover {
+    background-color: #4569a7;
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .task-form__submit:active {
+    background-color: #3457a1;
+    transform: translateY(-1px);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.1s;
+    }
+    
+
+/* ===================================================================== */
+/* estilos Task */
+/* ===================================================================== */
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: #7245a5;
+  border: 2px solid #560bad;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.task:hover {
+  background-color: #4a4e69;
+}
+
+.task.started {
+  background-color: #f72585;
+  border-color: #f72585;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-description {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.task-duration,
+.task-priority {
+  margin-bottom: 5px;
+}
+
+.task-actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #f72585;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.task-actions button:hover {
+  background-color: #7209b7;
+}
+
+.task-actions button:active {
+  background-color: #560bad;
+}
+
+.task-edit {
+  margin-bottom: 10px;
+}
+
+.task-edit label {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.task-edit input[type="text"],
+.task-edit select {
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.task-edit-actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #f72585;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.task-edit-actions button:hover {
+  background-color: #7209b7;
+}
+
+.task-edit-actions button:active {
+  background-color: #560bad;
+}
+
+/* ===================================================================== */
+/* estilos timer */
+/* ===================================================================== */
+.timer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to bottom, #4a4e69, #2b2d42);
+  z-index: 1;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.timer-controls button {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f72585;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.timer-controls button:hover {
+  background-color: #7209b7;
+}
+
+.timer-controls button:active {
+  background-color: #560bad;
+}
+
+.timer-display {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  background-color: #560bad;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.timer-display::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+}
